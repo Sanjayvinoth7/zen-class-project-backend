@@ -7,8 +7,8 @@ try{
     // console.log(req.header());
     const token = await request.header("x-auth-token");
     console.log(token);
-    jwt.verify(token,process.env.secretkey);
-    console.log("verification",jwt.verify(token,process.env.secretkey));
+    jwt.verify(token,process.env.secretKey);
+    console.log("verification",jwt.verify(token,process.env.secretKey));
     next();
 }catch(err){
     console.log(jwt.verify("Authorization error",err.message));
