@@ -13,7 +13,7 @@ async function genHashedPassword(password){
     const salt = await bcrypt.genSalt(no_of_rounds);
     const hashedPassword = await bcrypt.hash(password,salt);
     return hashedPassword;
-  }
+}
 
 router.post('/signup', async function (req, res) {
     const {email,password,userName} = req.body[0];
